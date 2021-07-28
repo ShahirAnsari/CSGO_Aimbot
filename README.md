@@ -1,4 +1,33 @@
 # CSGO_Aimbot
+
+Directory and Files definition
+
+
+
+* `data/object.names` - Contains number of classes,location of train.txt,valid.txt file and location of folder to store training_weights(create the training_weights folder manually in darknet directory).
+*  `data/object.names` - Contains the names of the classes to train on. One class per line.
+*  `data/object` - Contains images and label to train on.
+*  `data/train.txt` - Contains locations of all file to be trained on. i.e. all file in `data/object` folder
+
+All the above folder and files are to be placed in your `darknet/data` folder.
+
+Configuration file : `cfg/yolov3_CSGO.cfg`
+
+Modification to the config fle.
+* Comment the batch and subdivision under testing.
+* batch -  64  `(decrease or increase according to how much your pc can handle.)`
+* subdivision - 64  `(decrease or increase according to how much your pc can handle. Subdivision <= Batch.`
+* classes - 2  `(Your number of classes)`
+* max_batches - 4000 `(2000*classes)`
+* filter - 21  `(classes+5)*3 i.e (2+5)*3`
+* random - 0/1 `1- if you have different size images,0-If all images are of same size`
+
+
+
+
+
+
+
 Train yolo model on cs go game images to detect and shoot enemies
 
 * The [default weights](https://pjreddie.com/media/files/darknet53.conv.74) (darknet53.conv.74) file can be downloaded
