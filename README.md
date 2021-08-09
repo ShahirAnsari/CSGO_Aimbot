@@ -36,4 +36,9 @@ and placed in the weights folder.
 * You can create a validation file (valid.txt) to if you want but we can always test it manually after training.
 
 * Training can be done using the command.
-> *./darknet.exe detector train data/object.data cfg/yolov3_custom.cfg weights/darknet53.conv.74*
+ 
+     ./darknet.exe detector train data/object.data cfg/yolov3_custom.cfg weights/darknet53.conv.74*
+
+
+The next part is converting the model to tensorflow and detect objects on images and videos.
+
