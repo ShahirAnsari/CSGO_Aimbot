@@ -1,5 +1,14 @@
 # CSGO_Aimbot
 
+Overview to train for images
+* Place images in object/data foler.
+* Place default weights in main directory
+* Modify data/object.data and data/object.names file.
+* Modify cfg/yolo.config file.
+* Run generate.py program that create data.train.txt file.
+* Run darknet.exe to start training.
+
+
 Directory and Files definition
 
 
